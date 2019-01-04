@@ -18,15 +18,3 @@ public class JenkinsApplication {
 	}
 
 }
-
-
-@RestController
-class ABC{
-	@GetMapping("get")
-	public Map<String,String> map(){
-		Map<String,String> m = new HashMap<>();
-		m.put("key","value");
-		m.put("key1","value");
-		return m;
-	}
-}
