@@ -20,11 +20,11 @@ public class UserDAO implements RowMapper<User> {
           "insert into " + TABLE_NAME + "(%1$s,%2$s) values (:%1$s,:%2$s)", COL_NAME, COL_EMAIL_ID);
   @Autowired DAOTempltae daoTempltae;
 
-  public CompletionStage<User> insert(User user) {
+  public CompletionStage<Integer> insert(User user) {
     Map<String, Object> paramMap = new HashMap<>();
     paramMap.put(COL_NAME, user.getName());
     paramMap.put(COL_EMAIL_ID, user.getEmailID());
-    return daoTempltae.save(this, INSERT_USER, paramMap);
+    return daoTempltae.save(INSERT_USER, paramMap);
   }
 
   @Override

@@ -17,7 +17,7 @@ public class Api {
   @Autowired UserService userService;
 
   @PostMapping(value = "save")
-  public DeferredResult<User> insert(@RequestBody User user) {
+  public DeferredResult<Integer> insert(@RequestBody User user) {
     return CustomDeferredResult.processDeferredResult(userService.save(user).toCompletableFuture());
   }
 }
