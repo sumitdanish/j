@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.async.DeferredResult;
 
 @RestController
-@RequestMapping("test")
+@RequestMapping("/test")
 public class Api {
 
   @Autowired UserService userService;
